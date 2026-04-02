@@ -1,7 +1,7 @@
 # Containerized Multi-Service Application with Service Mesh and Internal Traffic Control
 
 # Architecture Digram :
-![](images/Microservicesarchitecture.png)
+![](Microservicesarchitecture.png)
 
 ## Project Overview
 You joined as a Platform Engineer in a product company migrating from a monolithic architecture to microservices. Developers reported issues such as:
@@ -50,7 +50,7 @@ kubectl get pods -A
 
 Screenshot: Cluster & Pods status
 
-![](images/pod.png)
+![](pod.png)
 
 
 
@@ -77,7 +77,7 @@ docker push <dockerhub-username>/order-service:v1
 docker push <dockerhub-username>/payment-service:v1
 ```
 Screenshot: Docker build & push logs
-![](images/kubectl.png)
+![](kubectl.png)
 
 
 #### 3. Deploy Microservices to Kubernetes
@@ -94,7 +94,7 @@ kubectl get pods
 kubectl get svc
 ```
 Screenshot: Microservices running
-![](images/payment%20deployment.png)
+![](payment%20deployment.png)
 
 #### 4. Service Mesh Installation (Istio)
 
@@ -108,7 +108,7 @@ Verified Istio pods:
 kubectl get pods -n istio-system
 ```
 Screenshot: Istio system pods
-![](images/istio.png)
+![](istio.png)
 
 #### 5. Traffic Management
 
@@ -159,7 +159,7 @@ spec:
       retryOn: gateway-error,connect-failure,refused-stream
 ```
 Screenshot: Traffic split in Kiali
-![](images/Graph.png)
+![](Graph.png)
 
 #### 6. Observability
 
@@ -171,7 +171,7 @@ kubectl port-forward svc/kiali -n istio-system 20001:20001 --address 0.0.0.0
 ```
 Screenshot: Kiali Dashboard showing traffic and services
 
-![](images/Graph1.png)
+![](Graph1.png)
 
 Observed metrics such as:
 ```
@@ -181,7 +181,7 @@ Error rate
 
 Service health
 ```
-![](images/Graph2.png)
+![](Graph2.png)
 
 ## Service Mesh Benefits
 
