@@ -1,7 +1,7 @@
 # Containerized Multi-Service Application with Service Mesh and Internal Traffic Control
 
 # Architecture Digram :
-![Microservice Architecture](images/Microservicesarchitecture.png)
+![Architecture](images/Microservicesarchitecture.png)
 
 ## Project Overview
 You joined as a Platform Engineer in a product company migrating from a monolithic architecture to microservices. Developers reported issues such as:
@@ -50,9 +50,7 @@ kubectl get pods -A
 
 Screenshot: Cluster & Pods status
 
-![Pod Status](images/pod.png)
-
-
+![Pod](images/pod.png)
 
 ### 2. Containerization
 
@@ -79,7 +77,6 @@ docker push <dockerhub-username>/payment-service:v1
 Screenshot: Docker build & push logs
 ![Kubectl](images/kubectl.png)
 
-
 #### 3. Deploy Microservices to Kubernetes
 
 Applied deployment and service YAML files:
@@ -94,7 +91,7 @@ kubectl get pods
 kubectl get svc
 ```
 Screenshot: Microservices running
-![Payment Deployment](images/payment%20deployment.png)
+![Payment](images/payment%20deployment.png)
 
 #### 4. Service Mesh Installation (Istio)
 
